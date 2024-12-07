@@ -101,6 +101,10 @@ public class Client {
         return null;
     }
 
+    public void setAccounts(List<AbstractAccount> accounts) {
+        this.accounts = accounts;
+    }
+
     public void addAccount(AbstractAccount account) throws AccountNumberLimitException {
 
         if (accounts.size() >= 2) {
