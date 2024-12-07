@@ -7,6 +7,8 @@
 
     <bean id="clientRepository" class="com.luxoft.bankapp.service.storage.MapClientRepository"/>
     <bean id="banking" class="com.luxoft.bankapp.service.BankingImpl" autowire="byType"/>
-    <bean id="bankReport" class="com.luxoft.bankapp.service.BankReportServiceImpl" autowire="byType"/>
+    <bean id="bankReport" class="com.luxoft.bankapp.service.BankReportServiceImpl">
+        <property name="repository" ref="clientRepository"/>
+    </bean>
 
 </beans>
